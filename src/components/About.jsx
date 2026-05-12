@@ -23,7 +23,7 @@ export default function About() {
       </div>
 
       {/* Bio text — includes everything previously in the visual box */}
-      <p style={{ color: "hsl(220 10% 60%)", lineHeight: "1.85", marginBottom: "20px", fontSize: "1.05rem", textAlign: "center" }}>
+      <p style={{ color: "hsl(0 0% 60%)", lineHeight: "1.85", marginBottom: "20px", fontSize: "1.05rem", textAlign: "center" }}>
         I'm <span style={{ color: "hsl(45 93% 58%)", fontWeight: "600" }}>Priyansh Shukla</span>, a sophomore pursuing{" "}
         <span style={{ color: "hsl(45 93% 58%)", fontWeight: "600" }}>B.E. in Information Science</span> at{" "}
         <span style={{ color: "hsl(45 93% 58%)", fontWeight: "600" }}>RV College of Engineering, Bangalore</span>.
@@ -31,7 +31,7 @@ export default function About() {
         participating in Hackathons &amp; CTF challenges, and serving as an Organiser in the{" "}
         <span style={{ color: "hsl(45 93% 58%)", fontWeight: "600" }}>Rotaract Club of RVCE</span>.
       </p>
-      <p style={{ color: "hsl(220 10% 60%)", lineHeight: "1.85", marginBottom: "44px", fontSize: "1.05rem", textAlign: "center" }}>
+      <p style={{ color: "hsl(0 0% 60%)", lineHeight: "1.85", marginBottom: "44px", fontSize: "1.05rem", textAlign: "center" }}>
         I love solving real-world problems through code — from building interactive web applications
         to experimenting with AI and IoT systems. Whether it's a hackathon, a CTF challenge, or a
         community event, I'm always up for something new. Currently{" "}
@@ -49,14 +49,14 @@ export default function About() {
           <div
             key={item.label}
             style={{
-              background: "hsl(220 14% 11%)",
-              border: "1px solid hsl(220 14% 18%)",
+              background: "hsl(0 0% 11%)",
+              border: "1px solid hsl(0 0% 18%)",
               borderRadius: "10px",
               padding: "14px 18px",
               textAlign: "center",
             }}
           >
-            <div style={{ fontSize: "0.72rem", color: "hsl(220 10% 45%)", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "4px" }}>
+            <div style={{ fontSize: "0.72rem", color: "hsl(0 0% 45%)", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "4px" }}>
               {item.label}
             </div>
             <div style={{ fontSize: "0.9rem", fontWeight: "600", color: "hsl(45 100% 96%)" }}>{item.val}</div>

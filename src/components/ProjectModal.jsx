@@ -31,8 +31,8 @@ export default function ProjectModal({ project, onClose }) {
         className="animate-scaleIn"
         onClick={(e) => e.stopPropagation()}
         style={{
-          background: "hsl(220 14% 11%)",
-          border: "1px solid hsl(220 14% 20%)",
+          background: "hsl(0 0% 11%)",
+          border: "1px solid hsl(0 0% 20%)",
           borderRadius: "20px",
           width: "100%",
           maxWidth: "780px",
@@ -46,10 +46,10 @@ export default function ProjectModal({ project, onClose }) {
         <div
           style={{
             padding: "28px 32px 24px",
-            borderBottom: "1px solid hsl(220 14% 16%)",
+            borderBottom: "1px solid hsl(0 0% 16%)",
             position: "sticky",
             top: 0,
-            background: "hsl(220 14% 11%)",
+            background: "hsl(0 0% 11%)",
             zIndex: 10,
             borderRadius: "20px 20px 0 0",
           }}
@@ -66,7 +66,7 @@ export default function ProjectModal({ project, onClose }) {
                     boxShadow: `0 0 12px ${project.color || "hsl(45 93% 58%)"}80`,
                   }}
                 />
-                <span style={{ fontSize: "0.75rem", color: "hsl(220 10% 50%)", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+                <span style={{ fontSize: "0.75rem", color: "hsl(0 0% 50%)", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.06em" }}>
                   {project.subtitle}
                 </span>
               </div>
@@ -77,8 +77,8 @@ export default function ProjectModal({ project, onClose }) {
             <button
               onClick={onClose}
               style={{
-                background: "hsl(220 14% 16%)",
-                border: "1px solid hsl(220 14% 22%)",
+                background: "hsl(0 0% 16%)",
+                border: "1px solid hsl(0 0% 22%)",
                 borderRadius: "8px",
                 width: "36px",
                 height: "36px",
@@ -86,13 +86,13 @@ export default function ProjectModal({ project, onClose }) {
                 alignItems: "center",
                 justifyContent: "center",
                 cursor: "pointer",
-                color: "hsl(220 10% 60%)",
+                color: "hsl(0 0% 60%)",
                 fontSize: "1rem",
                 flexShrink: 0,
                 transition: "all 0.2s ease",
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = "hsl(220 14% 20%)"; e.currentTarget.style.color = "hsl(45 93% 58%)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = "hsl(220 14% 16%)"; e.currentTarget.style.color = "hsl(220 10% 60%)"; }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "hsl(0 0% 20%)"; e.currentTarget.style.color = "hsl(45 93% 58%)"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = "hsl(0 0% 16%)"; e.currentTarget.style.color = "hsl(0 0% 60%)"; }}
             >
               ✕
             </button>
@@ -110,7 +110,7 @@ export default function ProjectModal({ project, onClose }) {
         <div style={{ padding: "28px 32px 32px" }}>
           {/* Description */}
           <Section title="About the Project">
-            <p style={{ color: "hsl(220 10% 65%)", lineHeight: "1.75", margin: 0 }}>
+            <p style={{ color: "hsl(0 0% 65%)", lineHeight: "1.75", margin: 0 }}>
               {project.fullDescription}
             </p>
           </Section>
@@ -119,14 +119,14 @@ export default function ProjectModal({ project, onClose }) {
           <Section title="Problem Statement">
             <div
               style={{
-                background: "hsl(220 14% 13%)",
-                border: "1px solid hsl(220 14% 20%)",
+                background: "hsl(0 0% 13%)",
+                border: "1px solid hsl(0 0% 20%)",
                 borderLeft: "3px solid hsl(45 93% 58%)",
                 borderRadius: "8px",
                 padding: "16px 18px",
               }}
             >
-              <p style={{ color: "hsl(220 10% 65%)", lineHeight: "1.75", margin: 0 }}>
+              <p style={{ color: "hsl(0 0% 65%)", lineHeight: "1.75", margin: 0 }}>
                 {project.problemStatement}
               </p>
             </div>
@@ -143,8 +143,8 @@ export default function ProjectModal({ project, onClose }) {
                   <span
                     key={t}
                     style={{
-                      background: "hsl(220 14% 15%)",
-                      border: "1px solid hsl(220 14% 22%)",
+                      background: "hsl(0 0% 15%)",
+                      border: "1px solid hsl(0 0% 22%)",
                       color: "hsl(45 100% 90%)",
                       fontSize: "0.72rem",
                       padding: "3px 10px",
@@ -166,9 +166,9 @@ export default function ProjectModal({ project, onClose }) {
                   <span
                     key={t}
                     style={{
-                      background: "hsl(220 14% 15%)",
-                      border: "1px solid hsl(220 14% 22%)",
-                      color: "hsl(220 10% 70%)",
+                      background: "hsl(0 0% 15%)",
+                      border: "1px solid hsl(0 0% 22%)",
+                      color: "hsl(0 0% 70%)",
                       fontSize: "0.72rem",
                       padding: "3px 10px",
                       borderRadius: "100px",
@@ -193,13 +193,13 @@ export default function ProjectModal({ project, onClose }) {
                     alignItems: "flex-start",
                     gap: "8px",
                     padding: "10px 14px",
-                    background: "hsl(220 14% 13%)",
-                    border: "1px solid hsl(220 14% 19%)",
+                    background: "hsl(0 0% 13%)",
+                    border: "1px solid hsl(0 0% 19%)",
                     borderRadius: "8px",
                   }}
                 >
                   <span style={{ color: "hsl(45 93% 58%)", fontSize: "0.85rem", flexShrink: 0, marginTop: "1px" }}>✓</span>
-                  <span style={{ color: "hsl(220 10% 70%)", fontSize: "0.82rem", lineHeight: "1.4" }}>{f}</span>
+                  <span style={{ color: "hsl(0 0% 70%)", fontSize: "0.82rem", lineHeight: "1.4" }}>{f}</span>
                 </div>
               ))}
             </div>
@@ -208,14 +208,14 @@ export default function ProjectModal({ project, onClose }) {
           {/* Challenges */}
           {project.challenges && (
             <Section title="Challenges Faced">
-              <p style={{ color: "hsl(220 10% 65%)", lineHeight: "1.75", margin: 0 }}>
+              <p style={{ color: "hsl(0 0% 65%)", lineHeight: "1.75", margin: 0 }}>
                 {project.challenges}
               </p>
             </Section>
           )}
 
           {/* CTA Buttons */}
-          <div className="modal-cta" style={{ display: "flex", gap: "12px", marginTop: "28px", paddingTop: "24px", borderTop: "1px solid hsl(220 14% 16%)" }}>
+          <div className="modal-cta" style={{ display: "flex", gap: "12px", marginTop: "28px", paddingTop: "24px", borderTop: "1px solid hsl(0 0% 16%)" }}>
             <a
               href={project.github}
               target="_blank"

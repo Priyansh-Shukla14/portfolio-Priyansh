@@ -2,7 +2,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer style={{ padding: "40px 24px", borderTop: "1px solid hsl(220 14% 14%)" }}>
+    <footer style={{ padding: "40px 24px", borderTop: "1px solid hsl(0 0% 14%)" }}>
       <div
         style={{
           maxWidth: "1200px",
@@ -26,7 +26,7 @@ export default function Footer() {
               justifyContent: "center",
               fontWeight: "800",
               fontSize: "0.85rem",
-              color: "hsl(220 14% 8%)",
+              color: "hsl(0 0% 8%)",
             }}
           >
             PS
@@ -61,12 +61,12 @@ export default function Footer() {
                 width: "36px",
                 height: "36px",
                 borderRadius: "8px",
-                background: "hsl(220 14% 14%)",
-                border: "1px solid hsl(220 14% 20%)",
+                background: "hsl(0 0% 14%)",
+                border: "1px solid hsl(0 0% 20%)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "hsl(220 10% 55%)",
+                color: "hsl(0 0% 55%)",
                 transition: "all 0.2s ease",
               }}
               onMouseEnter={(e) => {
@@ -75,9 +75,9 @@ export default function Footer() {
                 e.currentTarget.style.background = "hsl(45 93% 58% / 0.08)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.color = "hsl(220 10% 55%)";
-                e.currentTarget.style.borderColor = "hsl(220 14% 20%)";
-                e.currentTarget.style.background = "hsl(220 14% 14%)";
+                e.currentTarget.style.color = "hsl(0 0% 55%)";
+                e.currentTarget.style.borderColor = "hsl(0 0% 20%)";
+                e.currentTarget.style.background = "hsl(0 0% 14%)";
               }}
             >
               {link.icon}

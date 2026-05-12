@@ -2,7 +2,7 @@ import { experiences } from "../data/portfolioData.js";
 
 export default function Experience() {
   return (
-    <section id="experience" style={{ padding: "100px 24px", background: "hsl(220 14% 9%)" }}>
+    <section id="experience" style={{ padding: "100px 24px", background: "hsl(0 0% 9%)" }}>
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <div style={{ textAlign: "center", marginBottom: "60px" }}>
           <div className="section-tag">Experience</div>
@@ -13,8 +13,8 @@ export default function Experience() {
             {/* Role header */}
             <div
               style={{
-                background: "hsl(220 14% 11%)",
-                border: "1px solid hsl(220 14% 18%)",
+                background: "hsl(0 0% 11%)",
+                border: "1px solid hsl(0 0% 18%)",
                 borderRadius: "16px",
                 padding: "28px 32px",
                 marginBottom: "24px",
@@ -99,8 +99,8 @@ export default function Experience() {
                   <div
                     className="card-hover"
                     style={{
-                      background: "hsl(220 14% 11%)",
-                      border: "1px solid hsl(220 14% 18%)",
+                      background: "hsl(0 0% 11%)",
+                      border: "1px solid hsl(0 0% 18%)",
                       borderRadius: "12px",
                       padding: "20px 24px",
                     }}
@@ -115,7 +115,7 @@ export default function Experience() {
                     >
                       {event.name}
                     </h4>
-                    <p style={{ color: "hsl(220 10% 60%)", fontSize: "0.875rem", lineHeight: "1.65", margin: 0 }}>
+                    <p style={{ color: "hsl(0 0% 60%)", fontSize: "0.875rem", lineHeight: "1.65", margin: 0 }}>
                       {event.desc}
                     </p>
                   </div>

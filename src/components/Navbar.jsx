@@ -29,7 +29,7 @@ export default function Navbar() {
         right: 0,
         zIndex: 100,
         transition: "all 0.3s ease",
-        borderBottom: scrolled ? "1px solid hsl(220 14% 16%)" : "1px solid transparent",
+        borderBottom: scrolled ? "1px solid hsl(0 0% 16%)" : "1px solid transparent",
       }}
       className={scrolled ? "nav-blur" : ""}
     >
@@ -63,7 +63,7 @@ export default function Navbar() {
                 window.dispatchEvent(new Event("popstate"));
               }}
               style={{
-                color: "hsl(220 10% 70%)",
+                color: "hsl(0 0% 70%)",
                 textDecoration: "none",
                 padding: "6px 14px",
                 borderRadius: "6px",
@@ -76,7 +76,7 @@ export default function Navbar() {
                 e.target.style.background = "hsl(45 93% 58% / 0.08)";
               }}
               onMouseLeave={(e) => {
-                e.target.style.color = "hsl(220 10% 70%)";
+                e.target.style.color = "hsl(0 0% 70%)";
                 e.target.style.background = "transparent";
               }}
             >
@@ -91,7 +91,7 @@ export default function Navbar() {
           style={{
             display: "none",
             background: "none",
-            border: "1px solid hsl(220 14% 20%)",
+            border: "1px solid hsl(0 0% 20%)",
             borderRadius: "6px",
             padding: "6px 10px",
             cursor: "pointer",
@@ -108,8 +108,8 @@ export default function Navbar() {
       {menuOpen && (
         <div
           style={{
-            background: "hsl(220 14% 10%)",
-            borderBottom: "1px solid hsl(220 14% 16%)",
+            background: "hsl(0 0% 10%)",
+            borderBottom: "1px solid hsl(0 0% 16%)",
             padding: "16px 24px 20px",
             display: "flex",
             flexDirection: "column",
@@ -127,7 +127,7 @@ export default function Navbar() {
                 setMenuOpen(false);
               }}
               style={{
-                color: "hsl(220 10% 70%)",
+                color: "hsl(0 0% 70%)",
                 textDecoration: "none",
                 padding: "10px 14px",
                 borderRadius: "6px",

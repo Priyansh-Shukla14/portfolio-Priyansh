@@ -21,8 +21,8 @@ export default function Achievements() {
               key={ach.title}
               className="card-hover"
               style={{
-                background: "hsl(220 14% 11%)",
-                border: "1px solid hsl(220 14% 18%)",
+                background: "hsl(0 0% 11%)",
+                border: "1px solid hsl(0 0% 18%)",
                 borderRadius: "14px",
                 padding: "24px",
                 position: "relative",
@@ -80,7 +80,7 @@ export default function Achievements() {
 
               <p
                 style={{
-                  color: "hsl(220 10% 58%)",
+                  color: "hsl(0 0% 58%)",
                   fontSize: "0.83rem",
                   lineHeight: "1.6",
                   margin: 0,

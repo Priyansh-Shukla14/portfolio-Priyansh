@@ -39,26 +39,26 @@
 }
 
 :root {
-  --background: 220 14% 8%;
+  --background: 0 0% 8%;
   --foreground: 45 100% 96%;
-  --border: 220 14% 16%;
-  --input: 220 14% 16%;
+  --border: 0 0% 16%;
+  --input: 0 0% 16%;
   --ring: 45 93% 58%;
 
-  --card: 220 14% 11%;
+  --card: 0 0% 11%;
   --card-foreground: 45 100% 96%;
 
   --primary: 45 93% 58%;
-  --primary-foreground: 220 14% 8%;
+  --primary-foreground: 0 0% 8%;
 
-  --secondary: 220 14% 16%;
+  --secondary: 0 0% 16%;
   --secondary-foreground: 45 100% 96%;
 
-  --muted: 220 14% 14%;
-  --muted-foreground: 220 10% 55%;
+  --muted: 0 0% 14%;
+  --muted-foreground: 0 0% 55%;
 
   --accent: 45 93% 58%;
-  --accent-foreground: 220 14% 8%;
+  --accent-foreground: 0 0% 8%;
 
   --app-font-sans: 'Inter', 'Segoe UI', sans-serif;
   --app-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
@@ -191,8 +191,7 @@
 }
 
 .hero-gradient {
-  background: radial-gradient(ellipse at 30% 50%, hsl(45 93% 58% / 0.08) 0%, transparent 60%),
-              radial-gradient(ellipse at 70% 20%, hsl(45 93% 58% / 0.05) 0%, transparent 50%);
+  background: transparent;
 }
 
 .section-divider {
@@ -202,12 +201,12 @@
 
 .modal-overlay {
   backdrop-filter: blur(8px);
-  background: hsl(220 14% 8% / 0.85);
+  background: hsl(0 0% 8% / 0.85);
 }
 
 .nav-blur {
   backdrop-filter: blur(12px);
-  background: hsl(220 14% 8% / 0.9);
+  background: hsl(0 0% 8% / 0.9);
 }
 
 .tag-badge {
@@ -237,7 +236,7 @@
 
 .btn-primary {
   background: hsl(45 93% 58%);
-  color: hsl(220 14% 8%);
+  color: hsl(0 0% 8%);
   font-weight: 700;
   padding: 12px 28px;
   border-radius: 8px;

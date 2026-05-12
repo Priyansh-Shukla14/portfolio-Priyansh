@@ -85,8 +85,8 @@ export default function Contact() {
 
   const inputStyle = {
     width: "100%",
-    background: "hsl(220 14% 13%)",
-    border: "1px solid hsl(220 14% 22%)",
+    background: "hsl(0 0% 13%)",
+    border: "1px solid hsl(0 0% 22%)",
     borderRadius: "10px",
     padding: "12px 16px",
     color: "hsl(45 100% 96%)",
@@ -98,7 +98,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" style={{ padding: "100px 24px", background: "hsl(220 14% 9%)" }}>
+    <section id="contact" style={{ padding: "100px 24px", background: "hsl(0 0% 9%)" }}>
       <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
         <div style={{ textAlign: "center", marginBottom: "60px" }}>
           <div className="section-tag">Contact</div>
@@ -112,7 +112,7 @@ export default function Contact() {
           >
             Let's <span className="gradient-text">Work Together</span>
           </h2>
-          <p style={{ color: "hsl(220 10% 55%)", maxWidth: "500px", margin: "0 auto", lineHeight: "1.7" }}>
+          <p style={{ color: "hsl(0 0% 55%)", maxWidth: "500px", margin: "0 auto", lineHeight: "1.7" }}>
             Open to internship opportunities, collaborations, and interesting conversations. Drop me a message!
           </p>
         </div>
@@ -122,15 +122,15 @@ export default function Contact() {
           <div>
             <div
               style={{
-                background: "hsl(220 14% 11%)",
-                border: "1px solid hsl(220 14% 18%)",
+                background: "hsl(0 0% 11%)",
+                border: "1px solid hsl(0 0% 18%)",
                 borderRadius: "16px",
                 padding: "32px",
                 marginBottom: "20px",
               }}
             >
               <h3 style={{ fontSize: "1.1rem", fontWeight: "700", marginBottom: "8px" }}>Get In Touch</h3>
-              <p style={{ color: "hsl(220 10% 55%)", fontSize: "0.875rem", lineHeight: "1.7", marginBottom: "28px" }}>
+              <p style={{ color: "hsl(0 0% 55%)", fontSize: "0.875rem", lineHeight: "1.7", marginBottom: "28px" }}>
                 I'm currently open to new opportunities. Whether you have a project idea, internship offer, or just want to connect — I'd love to hear from you!
               </p>
 
@@ -146,8 +146,8 @@ export default function Contact() {
                       alignItems: "center",
                       gap: "14px",
                       padding: "14px 16px",
-                      background: "hsl(220 14% 13%)",
-                      border: "1px solid hsl(220 14% 20%)",
+                      background: "hsl(0 0% 13%)",
+                      border: "1px solid hsl(0 0% 20%)",
                       borderRadius: "10px",
                       textDecoration: "none",
                       transition: "all 0.2s ease",
@@ -155,11 +155,11 @@ export default function Contact() {
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.borderColor = "hsl(45 93% 58% / 0.4)";
-                      e.currentTarget.style.background = "hsl(220 14% 15%)";
+                      e.currentTarget.style.background = "hsl(0 0% 15%)";
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.borderColor = "hsl(220 14% 20%)";
-                      e.currentTarget.style.background = "hsl(220 14% 13%)";
+                      e.currentTarget.style.borderColor = "hsl(0 0% 20%)";
+                      e.currentTarget.style.background = "hsl(0 0% 13%)";
                     }}
                   >
                     <div
@@ -179,7 +179,7 @@ export default function Contact() {
                       {link.icon}
                     </div>
                     <div>
-                      <div style={{ fontSize: "0.72rem", color: "hsl(220 10% 45%)", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "2px" }}>
+                      <div style={{ fontSize: "0.72rem", color: "hsl(0 0% 45%)", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "2px" }}>
                         {link.label}
                       </div>
                       <div style={{ fontSize: "0.875rem", fontWeight: "600", color: "hsl(45 100% 92%)" }}>{link.value}</div>
@@ -195,8 +195,8 @@ export default function Contact() {
           {/* Right: Form */}
           <div
             style={{
-              background: "hsl(220 14% 11%)",
-              border: "1px solid hsl(220 14% 18%)",
+              background: "hsl(0 0% 11%)",
+              border: "1px solid hsl(0 0% 18%)",
               borderRadius: "16px",
               padding: "32px",
             }}
@@ -205,7 +205,7 @@ export default function Contact() {
               <div style={{ textAlign: "center", padding: "40px 0" }}>
                 <div style={{ fontSize: "3rem", marginBottom: "16px" }}>🎉</div>
                 <h3 style={{ fontSize: "1.3rem", fontWeight: "800", marginBottom: "12px" }}>Message Sent!</h3>
-                <p style={{ color: "hsl(220 10% 55%)", fontSize: "0.9rem", lineHeight: "1.6" }}>
+                <p style={{ color: "hsl(0 0% 55%)", fontSize: "0.9rem", lineHeight: "1.6" }}>
                   Thanks for reaching out! I'll get back to you within 24 hours.
                 </p>
                 <button
@@ -236,7 +236,7 @@ export default function Contact() {
 
                 <div className="contact-form-row" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "16px" }}>
                   <div>
-                    <label style={{ display: "block", fontSize: "0.75rem", fontWeight: "600", color: "hsl(220 10% 55%)", marginBottom: "6px", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                    <label style={{ display: "block", fontSize: "0.75rem", fontWeight: "600", color: "hsl(0 0% 55%)", marginBottom: "6px", textTransform: "uppercase", letterSpacing: "0.05em" }}>
                       Name *
                     </label>
                     <input
@@ -247,11 +247,11 @@ export default function Contact() {
                       placeholder="Your name"
                       style={inputStyle}
                       onFocus={(e) => (e.target.style.borderColor = "hsl(45 93% 58% / 0.6)")}
-                      onBlur={(e) => (e.target.style.borderColor = "hsl(220 14% 22%)")}
+                      onBlur={(e) => (e.target.style.borderColor = "hsl(0 0% 22%)")}
                     />
                   </div>
                   <div>
-                    <label style={{ display: "block", fontSize: "0.75rem", fontWeight: "600", color: "hsl(220 10% 55%)", marginBottom: "6px", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                    <label style={{ display: "block", fontSize: "0.75rem", fontWeight: "600", color: "hsl(0 0% 55%)", marginBottom: "6px", textTransform: "uppercase", letterSpacing: "0.05em" }}>
                       Email *
                     </label>
                     <input
@@ -263,13 +263,13 @@ export default function Contact() {
                       placeholder="your@email.com"
                       style={inputStyle}
                       onFocus={(e) => (e.target.style.borderColor = "hsl(45 93% 58% / 0.6)")}
-                      onBlur={(e) => (e.target.style.borderColor = "hsl(220 14% 22%)")}
+                      onBlur={(e) => (e.target.style.borderColor = "hsl(0 0% 22%)")}
                     />
                   </div>
                 </div>
 
                 <div style={{ marginBottom: "16px" }}>
-                  <label style={{ display: "block", fontSize: "0.75rem", fontWeight: "600", color: "hsl(220 10% 55%)", marginBottom: "6px", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                  <label style={{ display: "block", fontSize: "0.75rem", fontWeight: "600", color: "hsl(0 0% 55%)", marginBottom: "6px", textTransform: "uppercase", letterSpacing: "0.05em" }}>
                     Subject *
                   </label>
                   <input
@@ -280,12 +280,12 @@ export default function Contact() {
                     placeholder="What's this about?"
                     style={inputStyle}
                     onFocus={(e) => (e.target.style.borderColor = "hsl(45 93% 58% / 0.6)")}
-                    onBlur={(e) => (e.target.style.borderColor = "hsl(220 14% 22%)")}
+                    onBlur={(e) => (e.target.style.borderColor = "hsl(0 0% 22%)")}
                   />
                 </div>
 
                 <div style={{ marginBottom: "24px" }}>
-                  <label style={{ display: "block", fontSize: "0.75rem", fontWeight: "600", color: "hsl(220 10% 55%)", marginBottom: "6px", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                  <label style={{ display: "block", fontSize: "0.75rem", fontWeight: "600", color: "hsl(0 0% 55%)", marginBottom: "6px", textTransform: "uppercase", letterSpacing: "0.05em" }}>
                     Message *
                   </label>
                   <textarea
@@ -297,7 +297,7 @@ export default function Contact() {
                     placeholder="Tell me about your project or opportunity..."
                     style={{ ...inputStyle, resize: "vertical", minHeight: "120px" }}
                     onFocus={(e) => (e.target.style.borderColor = "hsl(45 93% 58% / 0.6)")}
-                    onBlur={(e) => (e.target.style.borderColor = "hsl(220 14% 22%)")}
+                    onBlur={(e) => (e.target.style.borderColor = "hsl(0 0% 22%)")}
                   />
                 </div>
 
@@ -309,7 +309,7 @@ export default function Contact() {
                 >
                   {loading ? (
                     <>
-                      <span style={{ width: "16px", height: "16px", border: "2px solid hsl(220 14% 8% / 0.4)", borderTopColor: "hsl(220 14% 8%)", borderRadius: "50%", display: "inline-block", animation: "spin 0.7s linear infinite" }} />
+                      <span style={{ width: "16px", height: "16px", border: "2px solid hsl(0 0% 8% / 0.4)", borderTopColor: "hsl(0 0% 8%)", borderRadius: "50%", display: "inline-block", animation: "spin 0.7s linear infinite" }} />
                       Sending...
                     </>
                   ) : (

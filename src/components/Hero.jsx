@@ -14,33 +14,7 @@ export default function Hero() {
         overflow: "hidden",
       }}
     >
-      {/* Background decoration */}
-      <div
-        style={{
-          position: "absolute",
-          top: "15%",
-          right: "8%",
-          width: "320px",
-          height: "320px",
-          borderRadius: "50%",
-          background: "hsl(45 93% 58% / 0.04)",
-          border: "1px solid hsl(45 93% 58% / 0.08)",
-          pointerEvents: "none",
-        }}
-      />
-      <div
-        style={{
-          position: "absolute",
-          bottom: "20%",
-          left: "5%",
-          width: "200px",
-          height: "200px",
-          borderRadius: "50%",
-          background: "hsl(45 93% 58% / 0.03)",
-          border: "1px solid hsl(45 93% 58% / 0.06)",
-          pointerEvents: "none",
-        }}
-      />
+
 
       <div className="hero-content" style={{ maxWidth: "1000px", width: "100%", display: "flex", alignItems: "center", gap: "60px" }}>
         {/* Left: Text */}
@@ -66,7 +40,7 @@ export default function Hero() {
             }}
           >
             Hi, I'm{" "}
-            <span className="gradient-text yellow-text-glow">Priyansh Shukla</span>
+            <span className="gradient-text">Priyansh Shukla</span>
           </h1>
 
           <div
@@ -85,7 +59,7 @@ export default function Hero() {
             className="animate-fadeInUp opacity-0 stagger-3"
             style={{
               fontSize: "1rem",
-              color: "hsl(220 10% 58%)",
+              color: "hsl(0 0% 58%)",
               lineHeight: "1.7",
               maxWidth: "500px",
               marginBottom: "36px",
@@ -174,7 +148,7 @@ export default function Hero() {
                 >
                   {stat.num}
                 </div>
-                <div style={{ fontSize: "0.75rem", color: "hsl(220 10% 55%)", fontWeight: "500" }}>
+                <div style={{ fontSize: "0.75rem", color: "hsl(0 0% 55%)", fontWeight: "500" }}>
                   {stat.label}
                 </div>
               </div>
@@ -190,7 +164,7 @@ export default function Hero() {
               width: "260px",
               height: "300px",
               borderRadius: "24px",
-              background: "hsl(220 14% 13%)",
+              background: "hsl(0 0% 13%)",
               border: "2px solid hsl(45 93% 58% / 0.35)",
               display: "flex",
               alignItems: "center",

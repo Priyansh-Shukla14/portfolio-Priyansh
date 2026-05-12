@@ -1,72 +1,113 @@
-import { useState, useEffect, useRef } from "react";
-import { skills } from "../data/portfolioData.js";
-
-function SkillBar({ name, level, index }) {
-  const [width, setWidth] = useState(0);
-  const ref = useRef();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => setWidth(level), index * 80);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [level, index]);
-
-  return (
-    <div ref={ref} style={{ marginBottom: "18px" }}>
-      <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "8px" }}>
-        <span style={{ fontSize: "0.875rem", fontWeight: "600", color: "hsl(45 100% 90%)" }}>{name}</span>
-      </div>
-      <div
-        style={{
-          height: "6px",
-          background: "hsl(220 14% 16%)",
-          borderRadius: "100px",
-          overflow: "hidden",
-        }}
-      >
-        <div
-          className="skill-bar"
-          style={{
-            height: "100%",
-            width: `${width}%`,
-            background: "linear-gradient(90deg, hsl(45 93% 58%), hsl(45 93% 68%))",
-            borderRadius: "100px",
-          }}
-        />
-      </div>
-    </div>
-  );
-}
-
-const techLogos = [
-  { name: "HTML", icon: "" },
-  { name: "CSS", icon: "" },
-  { name: "JavaScript", icon: "" },
-  { name: "React", icon: "" },
-  { name: "Tailwind CSS", icon: "" },
-  { name: "Node.js", icon: "" },
-  { name: "Express.js", icon: "" },
-  { name: "Git", icon: "" },
-];
-
 export default function Skills() {
-  const [activeTab, setActiveTab] = useState("Frontend");
+  const allSkills = [
+    {
+      name: "HTML",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M20 4l-1.9 11.5L12 19l-6.1-3.5L4 4h16z"></path>
+          <path d="M16 8H8l.5 4h7l-.5 4-3 1-3-1-.2-2"></path>
+        </svg>
+      ),
+      color: "#E34F26",
+    },
+    {
+      name: "CSS",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M20 4l-1.9 11.5L12 19l-6.1-3.5L4 4h16z"></path>
+          <path d="M16 16.5l-4 1-4-1-.5-4h9l-.2-2H7.5l-.2-2h9.2l1.2 12z"></path>
+        </svg>
+      ),
+      color: "#1572B6",
+    },
+    {
+      name: "JavaScript",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M4 4h16v16H4z"></path>
+          <path d="M9 16.5c-1.5-1-2-2.5-2-2.5"></path>
+          <path d="M12.5 16.5c1.5 1 4 1 4-2.5 0-2-4-2-4-4s2.5-3.5 4-2.5"></path>
+          <path d="M9 13v-3"></path>
+        </svg>
+      ),
+      color: "#F7DF1E",
+    },
+    {
+      name: "React JS",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="2"></circle>
+          <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(30 12 12)"></ellipse>
+          <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(90 12 12)"></ellipse>
+          <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(150 12 12)"></ellipse>
+        </svg>
+      ),
+      color: "#61DAFB",
+    },
+    {
+      name: "Node.js",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2l9 5v10l-9 5-9-5V7l9-5z"></path>
+          <path d="M12 22V12"></path>
+          <path d="M12 12L3 7"></path>
+          <path d="M12 12l9-5"></path>
+        </svg>
+      ),
+      color: "#339933",
+    },
+    {
+      name: "Express.js",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M24 18.588a1.529 1.529 0 01-1.895-.72l-3.45-4.771-.5-.667-4.003 5.444a1.466 1.466 0 01-1.802.708l5.158-6.92-4.798-6.251a1.595 1.595 0 011.9.666l3.576 4.83 3.596-4.81a1.435 1.435 0 011.788-.668L21.708 7.9l-2.522 3.283a.666.666 0 000 .994l4.804 6.412zM.002 11.576l.42-2.075c1.154-4.103 5.858-5.81 9.094-3.27 1.895 1.489 2.368 3.597 2.275 5.973H1.116C.943 16.447 4.005 19.009 7.92 17.7a4.078 4.078 0 002.582-2.876c.207-.666.548-.78 1.174-.588a5.417 5.417 0 01-2.589 3.957 6.272 6.272 0 01-7.306-.933 6.575 6.575 0 01-1.64-3.858c0-.235-.08-.455-.134-.666A88.33 88.33 0 010 11.577zm1.127-.286h9.654c-.06-3.076-2.001-5.258-4.59-5.278-2.882-.04-4.944 2.094-5.071 5.264z"></path>
+        </svg>
+      ),
+      color: "#ffffff",
+    },
+    {
+      name: "Tailwind CSS",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"></path>
+        </svg>
+      ),
+      color: "#06B6D4",
+    },
+    {
+      name: "Git & GitHub",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      ),
+      color: "#ffffff",
+    },
+    {
+      name: "Next.js",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18.665 21.978C16.758 23.255 14.465 24 12 24 5.377 24 0 18.623 0 12S5.377 0 12 0s12 5.377 12 12c0 3.583-1.574 6.801-4.067 9.001L9.219 7.2H7.2v9.596h1.615V9.251l9.85 12.727Zm-3.332-8.533 1.6 2.061V7.2h-1.6v6.245Z"></path>
+        </svg>
+      ),
+      color: "#ffffff",
+    },
+    {
+      name: "PostgreSQL",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M23.5594 14.7228a.5269.5269 0 0 0-.0563-.1191c-.139-.2632-.4768-.3418-1.0074-.2321-1.6533.3411-2.2935.1312-2.5256-.0191 1.342-2.0482 2.445-4.522 3.0411-6.8297.2714-1.0507.7982-3.5237.1222-4.7316a1.5641 1.5641 0 0 0-.1509-.235C21.6931.9086 19.8007.0248 17.5099.0005c-1.4947-.0158-2.7705.3461-3.1161.4794a9.449 9.449 0 0 0-.5159-.0816 8.044 8.044 0 0 0-1.3114-.1278c-1.1822-.0184-2.2038.2642-3.0498.8406-.8573-.3211-4.7888-1.645-7.2219.0788C.9359 2.1526.3086 3.8733.4302 6.3043c.0409.818.5069 3.334 1.2423 5.7436.4598 1.5065.9387 2.7019 1.4334 3.582.553.9942 1.1259 1.5933 1.7143 1.7895.4474.1491 1.1327.1441 1.8581-.7279.8012-.9635 1.5903-1.8258 1.9446-2.2069.4351.2355.9064.3625 1.39.3772a.0569.0569 0 0 0 .0004.0041 11.0312 11.0312 0 0 0-.2472.3054c-.3389.4302-.4094.5197-1.5002.7443-.3102.064-1.1344.2339-1.1464.8115-.0025.1224.0329.2309.0919.3268.2269.4231.9216.6097 1.015.6331 1.3345.3335 2.5044.092 3.3714-.6787-.017 2.231.0775 4.4174.3454 5.0874.2212.5529.7618 1.9045 2.4692 1.9043.2505 0 .5263-.0291.8296-.0941 1.7819-.3821 2.5557-1.1696 2.855-2.9059.1503-.8707.4016-2.8753.5388-4.1012.0169-.0703.0357-.1207.057-.1362.0007-.0005.0697-.0471.4272.0307a.3673.3673 0 0 0 .0443.0068l.2539.0223.0149.001c.8468.0384 1.9114-.1426 2.5312-.4308.6438-.2988 1.8057-1.0323 1.5951-1.6698zM2.371 11.8765c-.7435-2.4358-1.1779-4.8851-1.2123-5.5719-.1086-2.1714.4171-3.6829 1.5623-4.4927 1.8367-1.2986 4.8398-.5408 6.108-.13-.0032.0032-.0066.0061-.0098.0094-2.0238 2.044-1.9758 5.536-1.9708 5.7495-.0002.0823.0066.1989.0162.3593.0348.5873.0996 1.6804-.0735 2.9184-.1609 1.1504.1937 2.2764.9728 3.0892.0806.0841.1648.1631.2518.2374-.3468.3714-1.1004 1.1926-1.9025 2.1576-.5677.6825-.9597.5517-1.0886.5087-.3919-.1307-.813-.5871-1.2381-1.3223-.4796-.839-.9635-2.0317-1.4155-3.5126zm6.0072 5.0871c-.1711-.0428-.3271-.1132-.4322-.1772.0889-.0394.2374-.0902.4833-.1409 1.2833-.2641 1.4815-.4506 1.9143-1.0002.0992-.126.2116-.2687.3673-.4426a.3549.3549 0 0 0 .0737-.1298c.1708-.1513.2724-.1099.4369-.0417.156.0646.3078.26.3695.4752.0291.1016.0619.2945-.0452.4444-.9043 1.2658-2.2216 1.2494-3.1676 1.0128zm2.094-3.988-.0525.141c-.133.3566-.2567.6881-.3334 1.003-.6674-.0021-1.3168-.2872-1.8105-.8024-.6279-.6551-.9131-1.5664-.7825-2.5004.1828-1.3079.1153-2.4468.079-3.0586-.005-.0857-.0095-.1607-.0122-.2199.2957-.2621 1.6659-.9962 2.6429-.7724.4459.1022.7176.4057.8305.928.5846 2.7038.0774 3.8307-.3302 4.7363-.084.1866-.1633.3629-.2311.5454zm7.3637 4.5725c-.0169.1768-.0358.376-.0618.5959l-.146.4383a.3547.3547 0 0 0-.0182.1077c-.0059.4747-.054.6489-.115.8693-.0634.2292-.1353.4891-.1794 1.0575-.11 1.4143-.8782 2.2267-2.4172 2.5565-1.5155.3251-1.7843-.4968-2.0212-1.2217a6.5824 6.5824 0 0 0-.0769-.2266c-.2154-.5858-.1911-1.4119-.1574-2.5551.0165-.5612-.0249-1.9013-.3302-2.6462.0044-.2932.0106-.5909.019-.8918a.3529.3529 0 0 0-.0153-.1126 1.4927 1.4927 0 0 0-.0439-.208c-.1226-.4283-.4213-.7866-.7797-.9351-.1424-.059-.4038-.1672-.7178-.0869.067-.276.1831-.5875.309-.9249l.0529-.142c.0595-.16.134-.3257.213-.5012.4265-.9476 1.0106-2.2453.3766-5.1772-.2374-1.0981-1.0304-1.6343-2.2324-1.5098-.7207.0746-1.3799.3654-1.7088.5321a5.6716 5.6716 0 0 0-.1958.1041c.0918-1.1064.4386-3.1741 1.7357-4.4823a4.0306 4.0306 0 0 1 .3033-.276.3532.3532 0 0 0 .1447-.0644c.7524-.5706 1.6945-.8506 2.802-.8325.4091.0067.8017.0339 1.1742.081 1.939.3544 3.2439 1.4468 4.0359 2.3827.8143.9623 1.2552 1.9315 1.4312 2.4543-1.3232-.1346-2.2234.1268-2.6797.779-.9926 1.4189.543 4.1729 1.2811 5.4964.1353.2426.2522.4522.2889.5413.2403.5825.5515.9713.7787 1.2552.0696.087.1372.1714.1885.245-.4008.1155-1.1208.3825-1.0552 1.717-.0123.1563-.0423.4469-.0834.8148-.0461.2077-.0702.4603-.0994.7662zm.8905-1.6211c-.0405-.8316.2691-.9185.5967-1.0105a2.8566 2.8566 0 0 0 .135-.0406 1.202 1.202 0 0 0 .1342.103c.5703.3765 1.5823.4213 3.0068.1344-.2016.1769-.5189.3994-.9533.6011-.4098.1903-1.0957.333-1.7473.3636-.7197.0336-1.0859-.0807-1.1721-.151zm.5695-9.2712c-.0059.3508-.0542.6692-.1054 1.0017-.055.3576-.112.7274-.1264 1.1762-.0142.4368.0404.8909.0932 1.3301.1066.887.216 1.8003-.2075 2.7014a3.5272 3.5272 0 0 1-.1876-.3856c-.0527-.1276-.1669-.3326-.3251-.6162-.6156-1.1041-2.0574-3.6896-1.3193-4.7446.3795-.5427 1.3408-.5661 2.1781-.463zm.2284 7.0137a12.3762 12.3762 0 0 0-.0853-.1074l-.0355-.0444c.7262-1.1995.5842-2.3862.4578-3.4385-.0519-.4318-.1009-.8396-.0885-1.2226.0129-.4061.0666-.7543.1185-1.0911.0639-.415.1288-.8443.1109-1.3505.0134-.0531.0188-.1158.0118-.1902-.0457-.4855-.5999-1.938-1.7294-3.253-.6076-.7073-1.4896-1.4972-2.6889-2.0395.5251-.1066 1.2328-.2035 2.0244-.1859 2.0515.0456 3.6746.8135 4.8242 2.2824a.908.908 0 0 1 .0667.1002c.7231 1.3556-.2762 6.2751-2.9867 10.5405zm-8.8166-6.1162c-.025.1794-.3089.4225-.6211.4225a.5821.5821 0 0 1-.0809-.0056c-.1873-.026-.3765-.144-.5059-.3156-.0458-.0605-.1203-.178-.1055-.2844.0055-.0401.0261-.0985.0925-.1488.1182-.0894.3518-.1226.6096-.0867.3163.0441.6426.1938.6113.4186zm7.9305-.4114c.0111.0792-.049.201-.1531.3102-.0683.0717-.212.1961-.4079.2232a.5456.5456 0 0 1-.075.0052c-.2935 0-.5414-.2344-.5607-.3717-.024-.1765.2641-.3106.5611-.352.297-.0414.6111.0088.6356.1851z"></path>
+        </svg>
+      ),
+      color: "#4169E1",
+    },
+  ];
 
   return (
-    <section
-      id="skills"
-      style={{ padding: "100px 24px", background: "hsl(220 14% 9%)" }}
-    >
+    <section id="skills" style={{ padding: "100px 24px", background: "hsl(0 0% 9%)" }}>
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <div style={{ textAlign: "center", marginBottom: "60px" }}>
+          <div className="section-tag">Skills</div>
           <h2
             style={{
               fontSize: "clamp(2rem, 4vw, 2.8rem)",
@@ -74,113 +115,74 @@ export default function Skills() {
               letterSpacing: "-0.02em",
             }}
           >
-            My <span className="gradient-text">Skills</span>
+            My <span className="gradient-text">Tech Stack</span>
           </h2>
         </div>
 
-        <div className="skills-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px", marginBottom: "60px" }}>
-          {/* Category tabs + bars */}
-          <div
-            style={{
-              background: "hsl(220 14% 11%)",
-              border: "1px solid hsl(220 14% 18%)",
-              borderRadius: "16px",
-              padding: "32px",
-            }}
-          >
-            {/* Tabs */}
-            <div style={{ display: "flex", gap: "8px", marginBottom: "28px", flexWrap: "wrap" }}>
-              {Object.keys(skills).map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setActiveTab(cat)}
-                  style={{
-                    padding: "7px 16px",
-                    borderRadius: "100px",
-                    border: "1px solid",
-                    cursor: "pointer",
-                    fontSize: "0.78rem",
-                    fontWeight: "600",
-                    transition: "all 0.2s ease",
-                    background: activeTab === cat ? "hsl(45 93% 58%)" : "transparent",
-                    color: activeTab === cat ? "hsl(220 14% 8%)" : "hsl(220 10% 55%)",
-                    borderColor: activeTab === cat ? "hsl(45 93% 58%)" : "hsl(220 14% 22%)",
-                  }}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
-
-            {/* Skill bars */}
-            <div>
-              {skills[activeTab].map((skill, i) => (
-                <SkillBar key={skill.name} name={skill.name} level={skill.level} index={i} />
-              ))}
-            </div>
-          </div>
-
-          {/* Tech grid */}
-          <div
-            style={{
-              background: "hsl(220 14% 11%)",
-              border: "1px solid hsl(220 14% 18%)",
-              borderRadius: "16px",
-              padding: "32px",
-            }}
-          >
-            <h3 style={{ fontSize: "1rem", fontWeight: "700", marginBottom: "24px", color: "hsl(45 100% 90%)" }}>
-              Technologies I Work With
-            </h3>
-            <div className="tech-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "14px" }}>
-              {techLogos.map((tech) => (
-                <div
-                  key={tech.name}
-                  className="card-hover"
-                  style={{
-                    background: "hsl(220 14% 13%)",
-                    border: "1px solid hsl(220 14% 20%)",
-                    borderRadius: "10px",
-                    padding: "16px 10px",
-                    textAlign: "center",
-                    cursor: "default",
-                  }}
-                >
-                  <div style={{ fontSize: "1.6rem", marginBottom: "6px" }}>{tech.icon}</div>
-                  <div style={{ fontSize: "0.72rem", fontWeight: "600", color: "hsl(220 10% 60%)" }}>{tech.name}</div>
-                </div>
-              ))}
-            </div>
-
-            {/* Soft skills */}
-            <div style={{ marginTop: "24px", paddingTop: "24px", borderTop: "1px solid hsl(220 14% 18%)" }}>
-              <h4 style={{ fontSize: "0.85rem", fontWeight: "700", color: "hsl(220 10% 50%)", marginBottom: "14px", textTransform: "uppercase", letterSpacing: "0.06em" }}>
-                Soft Skills
-              </h4>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-                {["Team Leadership", "Problem Solving", "Communication", "Quick Learner", "Adaptability"].map(
-                  (s) => (
-                    <span key={s} className="tag-badge">{s}</span>
-                  )
-                )}
+        <div
+          className="skills-grid"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))",
+            gap: "24px",
+            maxWidth: "900px",
+            margin: "0 auto",
+          }}
+        >
+          {allSkills.map((skill) => (
+            <div
+              key={skill.name}
+              className="card-hover"
+              style={{
+                background: "hsl(0 0% 11%)",
+                border: "1px solid hsl(0 0% 18%)",
+                borderRadius: "16px",
+                padding: "24px 16px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "16px",
+                transition: "all 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = skill.color;
+                e.currentTarget.style.boxShadow = `0 10px 30px ${skill.color}20`;
+                e.currentTarget.querySelector('.skill-icon').style.color = skill.color;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "hsl(0 0% 18%)";
+                e.currentTarget.style.boxShadow = "none";
+                e.currentTarget.querySelector('.skill-icon').style.color = "hsl(45 100% 90%)";
+              }}
+            >
+              <div 
+                className="skill-icon"
+                style={{ 
+                  width: "48px", 
+                  height: "48px", 
+                  color: "hsl(45 100% 90%)",
+                  transition: "color 0.3s ease" 
+                }}
+              >
+                {skill.icon}
+              </div>
+              <div style={{ fontSize: "0.85rem", fontWeight: "600", color: "hsl(0 0% 70%)", textAlign: "center" }}>
+                {skill.name}
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
 
       <style>{`
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
           .skills-grid {
-            grid-template-columns: 1fr !important;
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 16px !important;
           }
           #skills {
             padding: 60px 20px !important;
-          }
-        }
-        @media (max-width: 480px) {
-          .tech-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
           }
         }
       `}</style>

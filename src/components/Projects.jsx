@@ -8,8 +8,8 @@ function ProjectCard({ project, onClick }) {
       className="card-hover"
       onClick={onClick}
       style={{
-        background: "hsl(220 14% 11%)",
-        border: "1px solid hsl(220 14% 18%)",
+        background: "hsl(0 0% 11%)",
+        border: "1px solid hsl(0 0% 18%)",
         borderRadius: "16px",
         padding: "28px",
         cursor: "pointer",
@@ -82,7 +82,7 @@ function ProjectCard({ project, onClick }) {
       {/* Description */}
       <p
         style={{
-          color: "hsl(220 10% 58%)",
+          color: "hsl(0 0% 58%)",
           fontSize: "0.875rem",
           lineHeight: "1.65",
           marginBottom: "20px",

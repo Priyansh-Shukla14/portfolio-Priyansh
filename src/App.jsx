@@ -33,7 +33,7 @@ export default function App() {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: "hsl(220 14% 8%)", color: "hsl(45 100% 96%)", display: "flex", flexDirection: "column" }}>
+    <div style={{ minHeight: "100vh", background: "hsl(0 0% 8%)", color: "hsl(45 100% 96%)", display: "flex", flexDirection: "column" }}>
       <Navbar />
       <main style={{ flex: 1, marginTop: "68px", position: "relative" }}>
         <AnimatePresence mode="wait">
