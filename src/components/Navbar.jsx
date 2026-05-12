@@ -44,24 +44,8 @@ export default function Navbar() {
             setMenuOpen(false);
           }}
         >
-          <span
-            style={{
-              width: "36px",
-              height: "36px",
-              borderRadius: "8px",
-              background: "hsl(45 93% 58%)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontWeight: "800",
-              fontSize: "1rem",
-              color: "hsl(220 14% 8%)",
-            }}
-          >
-            PS
-          </span>
-          <span style={{ fontWeight: "700", fontSize: "1rem", color: "hsl(45 100% 96%)" }}>
-            Priyansh<span style={{ color: "hsl(45 93% 58%)" }}>.</span>
+          <span style={{ fontWeight: "800", fontSize: "1.2rem", color: "hsl(45 100% 96%)", letterSpacing: "-0.02em" }}>
+            Priyansh <span style={{ color: "hsl(45 93% 58%)" }}>Shukla</span>
           </span>
         </a>
 

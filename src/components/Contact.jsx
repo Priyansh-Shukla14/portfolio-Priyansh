@@ -189,37 +189,7 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Availability badge */}
-            <div
-              style={{
-                background: "hsl(220 14% 11%)",
-                border: "1px solid hsl(220 14% 18%)",
-                borderRadius: "12px",
-                padding: "18px 20px",
-                display: "flex",
-                alignItems: "center",
-                gap: "12px",
-              }}
-            >
-              <div
-                style={{
-                  width: "10px",
-                  height: "10px",
-                  borderRadius: "50%",
-                  background: "#22c55e",
-                  boxShadow: "0 0 10px #22c55e80",
-                  flexShrink: 0,
-                }}
-              />
-              <div>
-                <div style={{ fontSize: "0.85rem", fontWeight: "700", color: "hsl(45 100% 90%)" }}>
-                  Available for Opportunities
-                </div>
-                <div style={{ fontSize: "0.75rem", color: "hsl(220 10% 50%)" }}>
-                  Internships, projects, and collaborations
-                </div>
-              </div>
-            </div>
+
           </div>
 
           {/* Right: Form */}

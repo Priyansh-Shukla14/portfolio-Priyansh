@@ -133,10 +133,6 @@ export default function Projects() {
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <div style={{ textAlign: "center", marginBottom: "60px" }}>
           <div className="section-tag">Projects</div>
-
-          <p style={{ color: "hsl(220 10% 55%)", maxWidth: "500px", margin: "0 auto", lineHeight: "1.7" }}>
-            Projects that solve real-world problems — from AI-powered platforms to IoT safety systems. Click any card to explore the details.
-          </p>
         </div>
 
         <div

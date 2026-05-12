@@ -6,19 +6,6 @@ export default function Achievements() {
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <div style={{ textAlign: "center", marginBottom: "60px" }}>
           <div className="section-tag">Achievements</div>
-          <h2
-            style={{
-              fontSize: "clamp(2rem, 4vw, 2.8rem)",
-              fontWeight: "800",
-              marginBottom: "16px",
-              letterSpacing: "-0.02em",
-            }}
-          >
-            Milestones &amp; <span className="gradient-text">Recognition</span>
-          </h2>
-          <p style={{ color: "hsl(220 10% 55%)", maxWidth: "500px", margin: "0 auto", lineHeight: "1.7" }}>
-            Highlights from my academic journey, competitive programming, and community involvement.
-          </p>
         </div>
 
         <div

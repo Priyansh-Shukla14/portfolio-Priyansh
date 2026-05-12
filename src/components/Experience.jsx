@@ -6,17 +6,6 @@ export default function Experience() {
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <div style={{ textAlign: "center", marginBottom: "60px" }}>
           <div className="section-tag">Experience</div>
-          <h2
-            style={{
-              fontSize: "clamp(2rem, 4vw, 2.8rem)",
-              fontWeight: "800",
-              marginBottom: "16px",
-              letterSpacing: "-0.02em",
-            }}
-          >
-            My <span className="gradient-text">Journey</span>
-          </h2>
-
         </div>
 
         {experiences.map((exp) => (
