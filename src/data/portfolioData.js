@@ -172,30 +172,9 @@ export const projects = [
 
 export const experiences = [
   {
-    org: "PROJECT JATAYU at RVCE",
-    logo: "https://github.com/project-jatayu.png",
-    roles: [
-      {
-        title: "Member",
-        period: "Nov 2024 – Dec 2025",
-        events: [
-          {
-            name: "Autonomous Aerial Vehicle Development",
-            desc: "Contributed to the development and testing of autonomous aerial systems, working on control systems and sensor integration.",
-          },
-        ],
-      },
-    ],
-  },
-  {
     org: "RVCE Rotaract Club",
     logo: import.meta.env.BASE_URL + "images/rotaract.png",
     roles: [
-      {
-        title: "Member",
-        period: "Nov 2025 – Dec 2025",
-        events: [],
-      },
       {
         title: "Organiser",
         period: "Dec 2025 – Present",
@@ -215,6 +194,27 @@ export const experiences = [
           {
             name: "Uptown Junk",
             desc: "Volunteered at “Uptown Junk” event organized by Rotaract Club, contributing to the coordination of a Treasure Hunt (Day 1) and a Best Out of Waste competition (Day 2). Assisted in event execution, participant management. ",
+          },
+        ],
+      },
+      {
+        title: "Member",
+        period: "Nov 2025 – Dec 2025",
+        events: [],
+      },
+    ],
+  },
+  {
+    org: "PROJECT JATAYU at RVCE",
+    logo: "https://github.com/project-jatayu.png",
+    roles: [
+      {
+        title: "Member",
+        period: "Nov 2024 – Dec 2025",
+        events: [
+          {
+            name: "Autonomous Aerial Vehicle Development",
+            desc: "Contributed to the development and testing of autonomous aerial systems, working on control systems and sensor integration.",
           },
         ],
       },
