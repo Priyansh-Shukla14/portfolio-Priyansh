@@ -286,7 +286,7 @@ export default function Contact() {
 
                 <div style={{ marginBottom: "24px" }}>
                   <label style={{ display: "block", fontSize: "0.75rem", fontWeight: "600", color: "hsl(0 0% 55%)", marginBottom: "6px", textTransform: "uppercase", letterSpacing: "0.05em" }}>
-                    Message *
+                    Message * (Please include your email here)
                   </label>
                   <textarea
                     name="message"
@@ -294,7 +294,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    placeholder="Tell me about your project or opportunity..."
+                    placeholder="Tell me about your project... (Please write your email address in this box so I can reply to you)"
                     style={{ ...inputStyle, resize: "vertical", minHeight: "120px" }}
                     onFocus={(e) => (e.target.style.borderColor = "hsl(45 93% 58% / 0.6)")}
                     onBlur={(e) => (e.target.style.borderColor = "hsl(0 0% 22%)")}
