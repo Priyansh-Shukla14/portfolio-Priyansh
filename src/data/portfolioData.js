@@ -146,6 +146,28 @@ export const projects = [
     demo: "#",
     color: "#A78BFA",
   },
+  {
+    id: 5,
+    title: "Acoustic Edge AI Detector",
+    subtitle: "Edge-AI Monitoring Network",
+    shortDesc: "A secure, multi-page web platform for an Edge-AI Acoustic Detection Network featuring authenticated access and a cyber-aesthetic design.",
+    techStack: ["HTML", "CSS", "JavaScript"],
+    fullDescription: "The Acoustic Edge AI Event Detector is a secure monitoring platform designed for an Edge-AI Acoustic Detection Network. It provides an intuitive dashboard for monitoring edge-level acoustic events with a professional, dark cyber-aesthetic interface. The system ensures that only authenticated users can access internal pages and monitoring logs.",
+    problemStatement: "Monitoring remote acoustic sensors requires a centralized platform that is both secure and accessible. There was a critical need for an authenticated interface that could display edge-AI event detections while strictly preventing unauthorized access to the system.",
+    tools: ["HTML5", "Vanilla CSS", "JavaScript", "Vercel"],
+    techniques: ["Authentication Handling", "Client-Side Routing", "Responsive UI/UX", "Static Deployment Optimization"],
+    keyFeatures: [
+      "Mandatory login-protected navigation",
+      "Dynamic dashboard for event monitoring",
+      "Professional dark cyber-aesthetic theme",
+      "Seamless client-side redirection",
+      "Optimized for Vercel deployment"
+    ],
+    challenges: "Handling client-side routing securely on a static deployment platform (Vercel) posed challenges with 404 errors during page reloads. This was resolved by configuring proper routing rules and optimizing the authentication workflow for immediate dashboard redirection upon successful login.",
+    github: "https://github.com/Priyansh-Shukla14/Distributed-Edge-Ai-Event-Detector.git",
+    demo: "#",
+    color: "#EF4444",
+  },
 ];
 
 export const experiences = [
