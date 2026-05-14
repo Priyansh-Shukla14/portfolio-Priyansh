@@ -172,36 +172,51 @@ export const projects = [
 
 export const experiences = [
   {
-    role: "Member",
     org: "PROJECT JATAYU at RVCE",
-    period: "2024 – 2025",
-    events: [
+    logo: "https://github.com/project-jatayu.png",
+    roles: [
       {
-        name: "Autonomous Aerial Vehicle Development",
-        desc: "Contributed to the development and testing of autonomous aerial systems, working on control systems and sensor integration.",
+        title: "Member",
+        period: "Nov 2024 – Dec 2025",
+        events: [
+          {
+            name: "Autonomous Aerial Vehicle Development",
+            desc: "Contributed to the development and testing of autonomous aerial systems, working on control systems and sensor integration.",
+          },
+        ],
       },
     ],
   },
   {
-    role: "Organiser",
     org: "RVCE Rotaract Club",
-    period: "2025 – Present",
-    events: [
+    logo: import.meta.env.BASE_URL + "images/rotaract.png",
+    roles: [
       {
-        name: "Project Pustak",
-        desc: " Volunteered in Project Pustak, contributing to a book donation drive that collected and distributed 24,000+ books to underprivileged schools across Bangalore.",
+        title: "Member",
+        period: "Nov 2025 – Dec 2025",
+        events: [],
       },
       {
-        name: "FastTrek 4.0",
-        desc: "Volunteered in FastTrek 4.0, assisting in the coordination of a trek to Kaurva Kunda Hills for 500+ students. ",
-      },
-      {
-        name: "Secret Santa",
-        desc: "Volunteered in a Secret Santa initiative, visiting NGOs and distributing gifts to underprivileged children during Christmas, contributing to spreading joy and community engagement.",
-      },
-      {
-        name: "Uptown Junk",
-        desc: "Volunteered at “Uptown Junk” event organized by Rotaract Club, contributing to the coordination of a Treasure Hunt (Day 1) and a Best Out of Waste competition (Day 2). Assisted in event execution, participant management. ",
+        title: "Organiser",
+        period: "Dec 2025 – Present",
+        events: [
+          {
+            name: "Project Pustak",
+            desc: " Volunteered in Project Pustak, contributing to a book donation drive that collected and distributed 24,000+ books to underprivileged schools across Bangalore.",
+          },
+          {
+            name: "FastTrek 4.0",
+            desc: "Volunteered in FastTrek 4.0, assisting in the coordination of a trek to Kaurva Kunda Hills for 500+ students. ",
+          },
+          {
+            name: "Secret Santa",
+            desc: "Volunteered in a Secret Santa initiative, visiting NGOs and distributing gifts to underprivileged children during Christmas, contributing to spreading joy and community engagement.",
+          },
+          {
+            name: "Uptown Junk",
+            desc: "Volunteered at “Uptown Junk” event organized by Rotaract Club, contributing to the coordination of a Treasure Hunt (Day 1) and a Best Out of Waste competition (Day 2). Assisted in event execution, participant management. ",
+          },
+        ],
       },
     ],
   },

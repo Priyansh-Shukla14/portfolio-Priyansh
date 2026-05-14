@@ -1,134 +1,239 @@
 import { experiences } from "../data/portfolioData.js";
 
+const getInitials = (orgName) => {
+  if (orgName.includes("JATAYU")) return "PJ";
+  if (orgName.includes("Rotaract")) return "RC";
+  return orgName.substring(0, 2).toUpperCase();
+};
+
 export default function Experience() {
   return (
-    <section id="experience" style={{ padding: "100px 24px", background: "hsl(0 0% 9%)" }}>
-      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-        <div style={{ textAlign: "center", marginBottom: "60px" }}>
-          <div className="section-tag">Experience</div>
+    <section id="experience" className="leadership-section">
+      <div className="leadership-container">
+        
+        {/* Header */}
+        <div className="leadership-header">
+          <div className="leadership-icon">
+            <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          </div>
+          <h2 className="leadership-title">
+            Leadership Roles
+            <div className="leadership-title-line"></div>
+          </h2>
         </div>
 
-        {experiences.map((exp) => (
-          <div key={exp.org} style={{ maxWidth: "800px", margin: "0 auto" }}>
-            {/* Role header */}
-            <div
-              style={{
-                background: "hsl(0 0% 11%)",
-                border: "1px solid hsl(0 0% 18%)",
-                borderRadius: "16px",
-                padding: "28px 32px",
-                marginBottom: "24px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                gap: "20px",
-                flexWrap: "wrap",
-              }}
-            >
-              <div style={{ display: "flex", alignItems: "center", gap: "18px" }}>
-                <div
-                  style={{
-                    width: "52px",
-                    height: "52px",
-                    borderRadius: "12px",
-                    background: "hsl(45 93% 58% / 0.12)",
-                    border: "1px solid hsl(45 93% 58% / 0.25)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: "1.4rem",
-                    flexShrink: 0,
-                  }}
-                >
-                  🌍
+        {/* Timeline Container */}
+        <div className="leadership-timeline">
+          {/* Main Vertical Line */}
+          <div className="timeline-main-line"></div>
+
+          {experiences.map((exp, index) => (
+            <div key={index} className="timeline-item">
+              {/* Org Logo & Title */}
+              <div className="timeline-org-header">
+                {/* Timeline Node Logo */}
+                <div className="timeline-node-logo">
+                  {exp.logo ? (
+                    <img src={exp.logo} alt={exp.org} style={{ width: "100%", height: "100%", objectFit: "contain", borderRadius: "10px", padding: "4px", backgroundColor: "#fff" }} />
+                  ) : (
+                    getInitials(exp.org)
+                  )}
                 </div>
-                <div>
-                  <h3 style={{ fontSize: "1.2rem", fontWeight: "800", margin: 0, letterSpacing: "-0.01em" }}>
-                    {exp.role}
-                  </h3>
-                  <div style={{ color: "hsl(45 93% 58%)", fontWeight: "600", fontSize: "0.9rem", marginTop: "2px" }}>
-                    {exp.org}
-                  </div>
-                </div>
+                
+                <h3 className="timeline-org-title">
+                  {exp.org}
+                </h3>
               </div>
-              <span
-                style={{
-                  background: "hsl(45 93% 58% / 0.1)",
-                  border: "1px solid hsl(45 93% 58% / 0.2)",
-                  color: "hsl(45 93% 58%)",
-                  padding: "5px 14px",
-                  borderRadius: "100px",
-                  fontSize: "0.8rem",
-                  fontWeight: "600",
-                }}
-              >
-                {exp.period}
-              </span>
-            </div>
 
-            {/* Events timeline */}
-            <div style={{ position: "relative", paddingLeft: "28px" }}>
-              {/* Timeline line */}
-              <div
-                style={{
-                  position: "absolute",
-                  left: "11px",
-                  top: "8px",
-                  bottom: "8px",
-                  width: "2px",
-                  background: "linear-gradient(180deg, hsl(45 93% 58% / 0.6), hsl(45 93% 58% / 0.1))",
-                }}
-              />
+              {/* Roles / Events */}
+              <div className="timeline-role-container">
+                {exp.roles.map((role, rIndex) => (
+                  <div key={rIndex} className="timeline-role">
+                    {/* Role Title */}
+                    <div className="role-title-wrapper">
+                      <div className="role-dot"></div>
+                      <h4 className="role-title">
+                        {role.title}
+                      </h4>
+                    </div>
+                    
+                    {/* Period */}
+                    <div className="role-period">
+                      <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="14" width="14" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                      {role.period}
+                    </div>
 
-              {exp.events.map((event, i) => (
-                <div key={event.name} style={{ position: "relative", marginBottom: i < exp.events.length - 1 ? "20px" : 0 }}>
-                  {/* Dot */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      left: "-23px",
-                      top: "16px",
-                      width: "10px",
-                      height: "10px",
-                      borderRadius: "50%",
-                      background: "hsl(45 93% 58%)",
-                      boxShadow: "0 0 10px hsl(45 93% 58% / 0.5)",
-                    }}
-                  />
-
-                  <div
-                    className="card-hover"
-                    style={{
-                      background: "hsl(0 0% 11%)",
-                      border: "1px solid hsl(0 0% 18%)",
-                      borderRadius: "12px",
-                      padding: "20px 24px",
-                    }}
-                  >
-                    <h4
-                      style={{
-                        fontSize: "1rem",
-                        fontWeight: "700",
-                        margin: "0 0 8px",
-                        color: "hsl(45 100% 95%)",
-                      }}
-                    >
-                      {event.name}
-                    </h4>
-                    <p style={{ color: "hsl(0 0% 60%)", fontSize: "0.875rem", lineHeight: "1.65", margin: 0 }}>
-                      {event.desc}
-                    </p>
+                    {/* Descriptions (Events) */}
+                    <div className="role-events">
+                      {role.events && role.events.map((ev, i) => (
+                        <div key={i} className="role-event-item">
+                           <span style={{ color: "hsl(45 100% 95%)", fontWeight: "600" }}>{ev.name}: </span>
+                           <span style={{ color: "hsl(0 0% 60%)" }}>{ev.desc}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
       <style>{`
+        .leadership-section {
+          padding: 100px 24px;
+          background: hsl(0 0% 9%);
+          font-family: 'Inter', sans-serif;
+        }
+        .leadership-container {
+          max-width: 900px;
+          margin: 0 auto;
+        }
+        .leadership-header {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          margin-bottom: 60px;
+        }
+        .leadership-icon {
+          background: hsl(45 93% 58% / 0.12);
+          border: 1px solid hsl(45 93% 58% / 0.25);
+          padding: 10px;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: hsl(45 93% 58%);
+        }
+        .leadership-title {
+          font-size: 2rem;
+          font-weight: 700;
+          color: #fff;
+          margin: 0;
+          display: flex;
+          align-items: center;
+        }
+        .leadership-title-line {
+          margin-left: 20px;
+          height: 1px;
+          width: 100px;
+          background: linear-gradient(90deg, hsl(45 93% 58%), transparent);
+        }
+        .leadership-timeline {
+          position: relative;
+          padding-left: 60px;
+        }
+        .timeline-main-line {
+          position: absolute;
+          left: 24px;
+          top: 24px;
+          bottom: 0;
+          width: 2px;
+          background: linear-gradient(180deg, hsl(45 93% 58%) 0%, hsl(45 93% 58% / 0.5) 80%, transparent 100%);
+        }
+        .timeline-item {
+          margin-bottom: 60px;
+          position: relative;
+        }
+        .timeline-org-header {
+          display: flex;
+          align-items: center;
+          gap: 24px;
+          margin-bottom: 20px;
+        }
+        .timeline-node-logo {
+          position: absolute;
+          left: -60px;
+          background: hsl(0 0% 11%);
+          border: 2px solid hsl(45 93% 58%);
+          width: 50px;
+          height: 50px;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: hsl(45 93% 58%);
+          font-weight: bold;
+          font-size: 1.2rem;
+          z-index: 2;
+          box-shadow: 0 0 0 6px hsl(0 0% 9%);
+        }
+        .timeline-org-title {
+          font-size: 1.4rem;
+          font-weight: 700;
+          color: #fff;
+          margin: 0;
+        }
+        .timeline-role-container {
+          padding-left: 10px;
+          margin-top: 24px;
+        }
+        .timeline-role {
+          position: relative;
+          margin-bottom: 30px;
+        }
+        .role-title-wrapper {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 8px;
+        }
+        .role-dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: hsl(45 93% 58%);
+          box-shadow: 0 0 8px hsl(45 93% 58% / 0.6);
+        }
+        .role-title {
+          font-size: 1.2rem;
+          font-weight: 600;
+          color: hsl(45 93% 58%);
+          margin: 0;
+        }
+        .role-period {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          color: #888;
+          font-size: 0.9rem;
+          margin-bottom: 16px;
+          padding-left: 16px;
+          font-family: monospace;
+        }
+        .role-events {
+          padding-left: 16px;
+        }
+        .role-event-item {
+          margin-bottom: 12px;
+          font-size: 0.95rem;
+          line-height: 1.6;
+        }
+        
         @media (max-width: 600px) {
-          #experience {
-            padding: 60px 20px !important;
+          .leadership-section {
+            padding: 60px 20px;
+          }
+          .leadership-title {
+            font-size: 1.5rem;
+          }
+          .leadership-timeline {
+            padding-left: 50px;
+          }
+          .timeline-main-line {
+            left: 19px;
+          }
+          .timeline-node-logo {
+            left: -50px;
+            width: 40px;
+            height: 40px;
+            font-size: 1rem;
+          }
+          .timeline-org-header {
+            gap: 16px;
+          }
+          .timeline-org-title {
+            font-size: 1.2rem;
           }
         }
       `}</style>
