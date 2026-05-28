@@ -7,7 +7,6 @@ import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
 import Experience from "./components/Experience.jsx";
 import Achievements from "./components/Achievements.jsx";
-import Contact from "./components/Contact.jsx";
 
 
 export default function App() {
@@ -28,7 +27,7 @@ export default function App() {
     if (currentPath.endsWith("/projects")) return <Projects />;
     if (currentPath.endsWith("/experience")) return <Experience />;
     if (currentPath.endsWith("/achievements")) return <Achievements />;
-    if (currentPath.endsWith("/contact")) return <Contact />;
+
     return <Hero />;
   };
 
