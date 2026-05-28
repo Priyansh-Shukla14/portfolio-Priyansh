@@ -18,40 +18,7 @@ export const skills = {
 };
 
 export const projects = [
-  {
-    id: 1,
-    title: "AI for Bharat",
-    subtitle: "AI Coding Coach",
 
-    shortDesc: "An AI-powered coding coach platform currently under development to help students learn programming with guided feedback and explanations.",
-
-    techStack: ["React", "Node.js", "Express", "MongoDB"],
-
-    fullDescription:
-      "AI for Bharat is an AI-powered coding education platform currently under development, aimed at helping students learn programming through guided problem-solving. The platform focuses on providing feedback on code, identifying mistakes, and encouraging logical thinking through step-by-step explanations. It is being designed to support learners at different levels by adapting to their progress and improving their problem-solving skills.",
-
-    problemStatement:
-      "Many students struggle to learn programming due to a lack of proper guidance and feedback while practicing problems. Existing platforms often provide solutions without helping users understand the reasoning behind them, making it difficult to build strong problem-solving skills.",
-
-    tools: ["React JS", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
-
-    techniques: ["Code Analysis", "Pattern-based Error Detection", "Guided Problem Solving", "Incremental Learning Approach"],
-
-    keyFeatures: [
-      "Code feedback system for identifying mistakes",
-      "Step-by-step guided explanations",
-      "Practice-based learning approach",
-      "Progress tracking for users",
-      "Clean and simple user interface",
-      "Scalable architecture for future AI integration",
-    ],
-
-    challenges:
-      "Designing a system that provides meaningful feedback without directly giving away answers is a key challenge. The focus is on building a guided learning experience that helps users think and solve problems independently rather than relying on direct solutions.",
-    github: "https://github.com/Priyansh-Shukla14/AI-FOR-BHARAT-AWS-HACKATHON.git",
-    demo: "#",
-    color: "#F5C842",
-  },
   {
     id: 2,
     title: "Smart Helmet",
