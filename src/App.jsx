@@ -7,6 +7,7 @@ import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
 import Experience from "./components/Experience.jsx";
 import Achievements from "./components/Achievements.jsx";
+import { Analytics } from "@vercel/analytics/react";
 
 
 export default function App() {
@@ -48,7 +49,7 @@ export default function App() {
           </motion.div>
         </AnimatePresence>
       </main>
-
+      <Analytics />
     </div>
   );
 }
