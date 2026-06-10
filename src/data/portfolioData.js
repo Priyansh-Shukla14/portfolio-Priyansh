@@ -8,6 +8,8 @@ export const skills = {
   "Backend & Tools": [
     { name: "Git & GitHub", level: 100 },
     { name: "MongoDB", level: 100 },
+    { name: "Supabase", level: 100 },
+    { name: "PostgreSQL", level: 100 },
   ],
   "Other Skills": [
     { name: "DSA / Problem Solving", level: 100 },
