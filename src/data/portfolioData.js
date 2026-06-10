@@ -6,8 +6,6 @@ export const skills = {
     { name: "Tailwind CSS", level: 100 },
   ],
   "Backend & Tools": [
-    { name: "Node.js", level: 100 },
-    { name: "Express.js", level: 100 },
     { name: "Git & GitHub", level: 100 },
     { name: "MongoDB", level: 100 },
   ],
