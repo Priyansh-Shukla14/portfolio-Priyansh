@@ -19,42 +19,6 @@ export const skills = {
 
 export const projects = [
 
-  {
-    id: 1,
-    title: "AEGIS",
-    subtitle: "AI-Powered Cyber Safety Platform",
-
-    shortDesc: "Full-stack web platform that uses AI to detect cyber threats, securely vault evidence, and trigger real SMS emergency alerts — deployed live on Vercel with Supabase.",
-
-    techStack: ["Next.js", "Prisma ORM", "Supabase", "Gemini AI", "Twilio", "Vercel"],
-
-    fullDescription:
-      "AEGIS (Anti-harassment Emergency Guard & Intelligence System) is a production-grade, full-stack cyber-safety platform built to protect individuals facing online blackmail, cyberbullying, and stalking. Users can register securely, upload evidence (screenshots, chat logs) which is automatically analyzed by Google Gemini AI for threat classification. A real-time dashboard shows risk scores, threat alerts, and an encrypted Evidence Vault. The SOS system triggers real SMS alerts to trusted contacts via Twilio. The entire platform is deployed on Vercel with a Supabase PostgreSQL cloud database.",
-
-    problemStatement:
-      "Victims of online harassment often panic and delete evidence, or are too scared to immediately contact authorities. There is a need for a secure, AI-assisted platform that preserves evidence, classifies threats objectively, and enables instant SOS alerts — giving victims control in their most vulnerable moments.",
-
-    tools: ["Next.js 16 (App Router)", "Prisma ORM", "Supabase PostgreSQL", "Google Gemini AI API", "Twilio SMS API", "JWT Authentication", "bcrypt", "Vercel"],
-
-    techniques: ["AI Threat Classification", "JWT Auth & Route Protection", "Serverless API Routes", "Cloud Database Migration", "Evidence Encryption", "Real-time SOS Dispatch", "Glassmorphism UI"],
-
-    keyFeatures: [
-      "Google Gemini AI auto-classifies evidence as CRITICAL / HIGH / MEDIUM",
-      "Real SMS emergency alerts via Twilio to trusted contacts",
-      "JWT-secured authentication with protected dashboard routes",
-      "Encrypted Evidence Vault for secure proof storage",
-      "Dynamic risk score that auto-updates based on AI analysis",
-      "One-tap SOS system with geolocation-aware dispatch",
-      "Deployed live on Vercel with Supabase cloud database",
-    ],
-
-    challenges:
-      "Migrating from local SQLite to Supabase PostgreSQL for Vercel deployment required solving IPv4/IPv6 connectivity issues via Session Pooler. Integrating Twilio SMS in a Next.js serverless environment required replacing the npm SDK with direct REST API calls to avoid Turbopack bundling conflicts. The Prisma build step was embedded directly into the Vercel build command to automate cloud schema migration.",
-
-    github: "https://github.com/Priyansh-Shukla14/AEGIS-Cyber-Defense.git",
-    demo: "https://aegis-cyber-defense-three.vercel.app",
-    color: "#22d3ee",
-  },
 
   {
     id: 2,
