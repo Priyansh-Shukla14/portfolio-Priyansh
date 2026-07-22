@@ -180,8 +180,13 @@ export const experiences = [
     logo: import.meta.env.BASE_URL + "images/rotaract.png",
     roles: [
       {
+        title: "Secretary",
+        period: "July 2026 – Present",
+        events: [],
+      },
+      {
         title: "Organiser",
-        period: "Dec 2025 – Present",
+        period: "Dec 2025 – June 2026",
         events: [
           {
             name: "Project Pustak",
