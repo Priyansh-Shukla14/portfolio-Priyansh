@@ -176,6 +176,17 @@ export const projects = [
 
 export const experiences = [
   {
+    org: "Igniterapp",
+    logo: import.meta.env.BASE_URL + "images/Igniterapp.png",
+    roles: [
+      {
+        title: "NEXT AI Product Developer",
+        period: "Aug 2026 – Present",
+        events: [],
+      },
+    ],
+  },
+  {
     org: "RVCE Rotaract Club",
     logo: import.meta.env.BASE_URL + "images/rotaract.png",
     roles: [
