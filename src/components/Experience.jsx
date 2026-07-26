@@ -1,4 +1,4 @@
-import { experiences } from "../data/portfolioData.js";
+import { experiences, professionalExperiences } from "../data/portfolioData.js";
 
 const getInitials = (orgName) => {
   if (orgName.includes("JATAYU")) return "PJ";
@@ -10,11 +10,63 @@ export default function Experience() {
   return (
     <section id="experience" className="leadership-section">
       <div className="leadership-container">
-        
-        {/* Header */}
+
+        {/* Professional Experience Header */}
         <div className="leadership-header">
           <div className="leadership-icon">
             <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          </div>
+          <h2 className="leadership-title">
+            Professional Experience
+            <div className="leadership-title-line"></div>
+          </h2>
+        </div>
+
+        {/* Professional Experience Timeline */}
+        <div className="leadership-timeline" style={{ marginBottom: "80px" }}>
+          <div className="timeline-main-line"></div>
+          {professionalExperiences.map((exp, index) => (
+            <div key={index} className="timeline-item">
+              <div className="timeline-org-header">
+                <div className="timeline-node-logo">
+                  {exp.logo ? (
+                    <img src={exp.logo} alt={exp.org} style={{ width: "100%", height: "100%", objectFit: "contain", borderRadius: "10px", padding: "4px", backgroundColor: "#fff" }} />
+                  ) : (
+                    getInitials(exp.org)
+                  )}
+                </div>
+                <h3 className="timeline-org-title">{exp.org}</h3>
+              </div>
+              <div className="timeline-role-container">
+                {exp.roles.map((role, rIndex) => (
+                  <div key={rIndex} className="timeline-role">
+                    <div className="role-title-wrapper">
+                      <div className="role-dot"></div>
+                      <h4 className="role-title">{role.title}</h4>
+                    </div>
+                    <div className="role-period">
+                      <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="14" width="14" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                      {role.period}
+                    </div>
+                    <div className="role-events">
+                      {role.events && role.events.map((ev, i) => (
+                        <div key={i} className="role-event-item">
+                          <span style={{ color: "hsl(45 100% 95%)", fontWeight: "600" }}>{ev.name}: </span>
+                          <span style={{ color: "hsl(0 0% 60%)" }}>{ev.desc}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Leadership Roles Header */}
+        <div className="leadership-header">
+          <div className="leadership-icon">
+            <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
           </div>
           <h2 className="leadership-title">
             Leadership Roles

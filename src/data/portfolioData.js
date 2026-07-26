@@ -138,18 +138,21 @@ export const projects = [
   },
 ];
 
-export const experiences = [
+export const professionalExperiences = [
   {
     org: "Igniterapp",
     logo: import.meta.env.BASE_URL + "images/Igniterapp.png",
     roles: [
       {
         title: "NEXT AI Product Developer",
-        period: "Aug 2026 – Present",
+        period: "July 2026 – Present",
         events: [],
       },
     ],
   },
+];
+
+export const experiences = [
   {
     org: "RVCE Rotaract Club",
     logo: import.meta.env.BASE_URL + "images/rotaract.png",
