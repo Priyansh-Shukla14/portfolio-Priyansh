@@ -178,7 +178,24 @@ export const professionalExperiences = [
       {
         title: "NEXT AI Product Developer",
         period: "July 2026 – Present",
-        events: [],
+        events: [
+          {
+            name: "Windows Desktop Application",
+            desc: "Built a native Windows desktop client for the teacher dashboard, packaged as a standalone installable app. Live-class processing runs on the teacher's own machine, with recordings uploaded straight to cloud object storage.",
+          },
+          {
+            name: "Client Requirements",
+            desc: "Worked directly with academy owners to turn their requests into shipped features — understanding what they actually needed, scoping it, building it, and rolling it out to live academies without interrupting classes already in progress.",
+          },
+          {
+            name: "Live Class Platform",
+            desc: "Improved the reliability of the live streaming and recording pipeline, diagnosing and fixing issues around stream sourcing, reconnection handling and video processing that affected classes while they were running.",
+          },
+          {
+            name: "Multi-Tenant Deployments",
+            desc: "Launched and customised white-labelled academy websites from shared templates, each with its own branding, course catalogue and domain, along with per-academy Android app builds.",
+          },
+        ],
       },
     ],
   },
