@@ -29,7 +29,7 @@ export default function App() {
     );
     document.title = page
       ? `${page.charAt(0).toUpperCase() + page.slice(1)} — Priyansh Shukla`
-      : "Priyansh Shukla — Full Stack Developer | RVCE Bangalore";
+      : "Priyansh Shukla — Full Stack Developer";
   }, [currentPath]);
 
   const renderSection = () => {
