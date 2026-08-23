@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://priyansh-shukla.vercel.app/sitemap.xml

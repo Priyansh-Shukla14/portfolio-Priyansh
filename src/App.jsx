@@ -21,6 +21,17 @@ export default function App() {
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
+  // Give each route its own tab title, so search results and browser history
+  // show something meaningful instead of repeating the same title everywhere.
+  useEffect(() => {
+    const page = ["about", "skills", "projects", "experience", "achievements"].find(
+      (p) => currentPath.endsWith(`/${p}`)
+    );
+    document.title = page
+      ? `${page.charAt(0).toUpperCase() + page.slice(1)} — Priyansh Shukla`
+      : "Priyansh Shukla — Full Stack Developer | RVCE Bangalore";
+  }, [currentPath]);
+
   const renderSection = () => {
     // We check using .endsWith just in case the app is hosted in a subdirectory like /portfolio/
     if (currentPath.endsWith("/about")) return <About />;
