@@ -130,7 +130,7 @@ export default function Hero() {
             }}
           >
             {[
-              { num: "4+", label: "Projects" },
+              { num: "5+", label: "Projects" },
               { num: "3", label: "Achievements" },
               { num: "2nd", label: "Year at RVCE" },
             ].map((stat) => (

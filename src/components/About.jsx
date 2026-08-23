@@ -28,7 +28,7 @@ export default function About() {
         <span style={{ color: "hsl(45 93% 58%)", fontWeight: "600" }}>B.E. in Information Science</span> at{" "}
         <span style={{ color: "hsl(45 93% 58%)", fontWeight: "600" }}>RV College of Engineering, Bangalore</span>.
         I am actively learning Data Structures &amp; Algorithms and Full Stack Development,
-        participating in Hackathons &amp; CTF challenges, and serving as an Organiser in the{" "}
+        participating in Hackathons &amp; CTF challenges, and serving as Secretary of the{" "}
         <span style={{ color: "hsl(45 93% 58%)", fontWeight: "600" }}>Rotaract Club of RVCE</span>.
       </p>
       <p style={{ color: "hsl(0 0% 60%)", lineHeight: "1.85", marginBottom: "44px", fontSize: "1.05rem", textAlign: "center" }}>
@@ -66,7 +66,15 @@ export default function About() {
 
       {/* Buttons */}
       <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", justifyContent: "center" }}>
-        <a href="#projects" className="btn-primary">
+        <a
+          href="/projects"
+          className="btn-primary"
+          onClick={(e) => {
+            e.preventDefault();
+            window.history.pushState({}, "", "/projects");
+            window.dispatchEvent(new Event("popstate"));
+          }}
+        >
           See My Work
         </a>
         <a

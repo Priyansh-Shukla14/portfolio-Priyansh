@@ -18,8 +18,40 @@ export const skills = {
 };
 
 export const projects = [
+  {
+    id: 6,
+    title: "FinDost",
+    subtitle: "AI Finance Companion",
 
+    shortDesc: "Full-stack personal finance tracker built for India — expense tracking, category budgets and a charted dashboard, deployed and live.",
 
+    techStack: ["Next.js 14", "Prisma", "PostgreSQL", "NextAuth", "Tailwind CSS"],
+
+    fullDescription:
+      "FinDost is a personal finance tracker built around how money is actually spent in India — from a ₹20 cup of tea to a monthly EMI. It supports Google and email/password sign-in, full expense CRUD with month and category filters, per-category monthly budgets with progress tracking, and a dashboard showing a category breakdown, a six-month spending trend and live budget health. The app is deployed on Vercel with a Neon PostgreSQL database behind Prisma.",
+
+    problemStatement:
+      "Most expense trackers are built for Western spending patterns and treat money as a floating-point number, which quietly introduces rounding errors. They also rarely handle the reality of a server running in one timezone while its users live in another, so expenses recorded on the first or last day of a month end up counted in the wrong month.",
+
+    tools: ["Next.js 14 (App Router)", "Prisma ORM", "Neon PostgreSQL", "NextAuth.js", "Zod", "Recharts", "Tailwind CSS", "Vercel"],
+
+    techniques: ["Server Actions", "Session-Scoped Queries", "Integer Money Arithmetic", "Timezone-Safe Date Handling", "Schema Validation", "Server-Side Rendering"],
+
+    keyFeatures: [
+      "Google OAuth and email/password auth with bcrypt",
+      "Expense CRUD with month and category filters plus pagination",
+      "13 default categories with support for custom ones",
+      "Monthly per-category budgets with progress indicators",
+      "Dashboard with category pie chart and 6-month trend",
+      "Money stored as integer paise to avoid rounding errors",
+    ],
+
+    challenges:
+      "The hardest bug was invisible in development and only appeared in production: month boundaries were being computed from the server's local time while dates were stored in UTC, so once deployed to Vercel every expense on the first or last day of a month landed in the wrong month. It was fixed by treating a date as a calendar day rather than a timestamp — stored at UTC midnight, with the current month always resolved in IST. Ownership was another concern: every update and delete runs as a single query filtered by both the record id and the session user id, so the permission check and the write cannot drift apart.",
+    github: "https://github.com/Priyansh-Shukla14/FinDost",
+    demo: "https://fin-dost.vercel.app",
+    color: "#10B981",
+  },
   {
     id: 2,
     title: "Smart Helmet",
